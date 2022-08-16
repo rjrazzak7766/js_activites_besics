@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> DOM </title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Welcome To DOM</h1>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto, modi numquam! Odio quasi, nemo veritatis laudantium temporibus veniam, doloribus itaque iure voluptatibus hic expedita iste omnis accusamus totam consequatur ab.</p>
+    </header>
+    <main id="main-container">
+        <section id = "myDom">
+            <h1>My Awsame DOM</h1>
+        <ul>
+            <li>Jalali set</li>
+            <li>Shafayet</li>
+            <li>Bonobash</li>
+            <li>Dom De re Baba </li>
+        </ul>
+        </section>
+        <section class = "myFood-Container">
+            <h1 id="food-Titel">My food</h1>
+        <ul>
+            <li>Rice</li>
+            <li>Egg</li>
+            <li>Fish</li>
+            <li>Vagitable</li>
+        </ul>
+        </section>
+        <section class="placesContainer " id="placesList">
+            <h1>places</h1>
+            <ul>
+                <li class="importent-places">Bagerhat</li>
+                <li class="importent-places">Cumilla</li>
+                <li class="importent-places">Rangpur</li>
+                <li class="importent-places">Dinajpur</li>
+                <li class="importent-places">Coxe-Bazar</li>
+            </ul>
+        </section>
+    </main>
+    <script src="./append.js"></script>
+    <script src="./index.js"></script>
+
+    <script>
+        const liCollection =  document.getElementsByTagName('li');
+        // console.log(liCollection);
+        for (const li of liCollection){
+            // console.log(li);
+            // console.log(li.innerText);
+        }
+        const allH1Collection = document.getElementsByTagName('h1');
+        for (const h1 of allH1Collection){
+            // console.log(h1);
+            // console.log(h1.innerText);
+        }
+        const allUlcollection =  document.getElementsByTagName('ul');
+        // console.log(allUlcollection);
+        for(const ul of allUlcollection) {
+            // console.log(ul);
+            // console.log(ul.innerText);
+        }
+         const myFoodCollection =  document.getElementById('myFood')
+         console.log(myFoodCollection.innerText, myFoodCollection.innerHTML);
+
+        const foodTitel=  document.getElementById('food-Titel');
+        foodTitel.innerText = 'New food titel';
+
+         const places =  document.getElementsByClassName('importent-places');
+         for(const place of places){
+            // console.log(place.innerText);
+         }
+        const foodLi = document.querySelectorAll('.myFood-Container li')
+        for(const li of foodLi){
+            // console.log(li.innerText);
+        }
+        const foodLi1 = document.querySelector('.myFood-Container li')
+        for(const li of foodLi){
+            // console.log(li.innerText);
+        }
+    </script>
+</body>
+</html>
